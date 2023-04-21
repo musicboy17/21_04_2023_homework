@@ -42,6 +42,7 @@ console.log(arr);
 // 3. Найти есть ли в этом массиве число 3
 let sum = 0;
 let j = 0;
+let min02 = 0;
 const arr02 = []
 const arr03 = []
 for (let i = 0; i < 5; i++) {
@@ -49,10 +50,29 @@ for (let i = 0; i < 5; i++) {
     arr02[i] = (arr03[j]);
     sum = sum + arr03[j];
     if (arr02[i] === 3) { console.log('Есть число 3') }
+
+
 }
 console.log(arr02);
+if (arr02[0] < arr02[1] && arr02[0] < arr02[2] && arr02[0] < arr02[3] && arr02[0] < arr02[4]) {
+    min02 = arr02[0];
+}
+if (arr02[1] < arr02[0] && arr02[1] < arr02[2] && arr02[1] < arr02[3] && arr02[1] < arr02[4]) {
+    min02 = arr02[1];
+}
+if (arr02[2] < arr02[0] && arr02[2] < arr02[1] && arr02[2] < arr02[3] && arr02[2] < arr02[4]) {
+    min02 = arr02[2];
+}
+if (arr02[3] < arr02[0] && arr02[3] < arr02[1] && arr02[3] < arr02[2] && arr02[3] < arr02[4]) {
+    min02 = arr02[3];
+}
 
-console.log(sum)
+if (arr02[4] < arr02[0] && arr02[4] < arr02[1] && arr02[4] < arr02[2] && arr02[4] < arr02[3]) {
+    min02 = arr02[4];
+}
+
+console.log('Минимальное число:  ' + min02)
+console.log('Сумма элементов массива равна: ' + sum)
 
 
 
